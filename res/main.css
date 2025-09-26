@@ -1,0 +1,13 @@
+.output-line {
+    -fx-font-family: "monospace";
+    -fx-text-inner-color: rgb(96, 0, 247)
+}
+
+.command-input-box {
+    -fx-font-family: "monospace";
+    -fx-text-inner-color: rgb(96, 0, 247)
+}
+
+.terminal-bg {
+    -fx-background-color: rgb(9, 0, 23)
+}
