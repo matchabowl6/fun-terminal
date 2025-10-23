@@ -5,10 +5,10 @@
 
   <groupId>com.matchabowl6.funterminal</groupId>
   <artifactId>fun-terminal</artifactId>
-  <version>0.1.0</version>
+  <version>0.5.0</version>
 
   <name>fun-terminal</name>
-  <url>https://github.com/matchabowl6</url>
+  <url>https://github.com/matchabowl6/fun-terminal</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
