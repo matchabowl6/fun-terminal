@@ -182,7 +182,7 @@ public class OutputLabelManager {
         // of the index number that we'll pass to makeMoveAnim().
         //
         // We start with outputLabels.size() instead of (outputLabels.size() - 1)
-        // to make the output labels move down while fading out.
+        // to make the output labels move up while fading out.
         int index = outputLabels.size();
         while (outputLabels.size() > 0) {
             Label labelToRemove = outputLabels.pollLast();
