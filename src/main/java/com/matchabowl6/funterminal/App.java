@@ -49,8 +49,8 @@ public class App extends Application {
         labelManager.reposition();
     }
 
-    private EventHandler<javafx.event.ActionEvent> mainCommandSubmitListener = new EventHandler<javafx.event.ActionEvent>() {
-		public void handle(javafx.event.ActionEvent _e) {
+    private EventHandler<ActionEvent> mainCommandSubmitListener = new EventHandler<ActionEvent>() {
+		public void handle(ActionEvent _e) {
 			String input = commandTextField.getText();
 			if (input.isEmpty())
 				return;
