@@ -14,6 +14,6 @@ public class Time extends Command {
     @Override
     public void execute(OutputBuffer buffer, String[] args) {
         ZonedDateTime dateTime = ZonedDateTime.now();
-        buffer.push("The time is " + dateTime.format(DateTimeFormatter.ofPattern("uuuu-MM-dd HH-mm-ss")));
+        buffer.push("The time is " + dateTime.format(DateTimeFormatter.ofPattern("uuuu-MM-dd HH:mm:ss")));
     }
 }
