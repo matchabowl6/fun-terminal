@@ -1,5 +1,6 @@
 package com.matchabowl6.funterminal;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
@@ -19,6 +20,8 @@ public class App extends Application {
     private DisplayedOutputBuffer outputBuffer = new DisplayedOutputBuffer(outputPane, Info.MAX_OUTPUT_LABELS);
     private OutputLabelManager labelManager = outputBuffer.getOutputLabelManager();
     private CommandHandler commandHandler = new CommandHandler(outputBuffer);
+
+    private BgmHandler bgmHandler = new BgmHandler();
 
     private static void setRegionSize(Region r, double width, double height) {
         r.resize(width, height); // Necessary due to undesired sizing quirks without this method call
@@ -47,6 +50,14 @@ public class App extends Application {
 		commandTextField.setTranslateY(outputPaneHeight);
 
         labelManager.reposition();
+    }
+
+    private void playBgm(String path) {
+        try {
+			bgmHandler.setAudioUri(new File(path).toURI().toString());
+		} catch (Exception e) {
+			System.out.println("Error occurred when trying to play background music.\n" + e.getMessage());
+		}
     }
 
     private EventHandler<ActionEvent> mainCommandSubmitListener = new EventHandler<ActionEvent>() {
@@ -82,6 +93,9 @@ public class App extends Application {
         labelManager.setTextColor(Color.rgb(125, 44, 255));
         labelManager.setFont(Info.PRIMARY_FONT);
         labelManager.push(Info.INITIAL_OUTPUT_TEXT);
+
+        // Music
+        playBgm("res/boogie-party.mp3");
 
         // Command text field
 		commandTextField.setPromptText("Enter a command...");
