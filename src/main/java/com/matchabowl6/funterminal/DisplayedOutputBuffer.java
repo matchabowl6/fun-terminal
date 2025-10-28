@@ -13,6 +13,10 @@ public class DisplayedOutputBuffer implements OutputBuffer {
         return labelManager;
     }
 
+    public void clear() {
+        labelManager.clear();
+    }
+
     public void push(String text) {
         labelManager.push(text);
     }

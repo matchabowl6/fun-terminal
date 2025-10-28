@@ -20,6 +20,7 @@ public class CommandHandler {
 
     public CommandHandler(DisplayedOutputBuffer buffer) {
         this.buffer = buffer;
+        appCommands.add(new Clear());
         appCommands.add(new Exit());
         appCommands.add(new Time());
     }
